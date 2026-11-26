@@ -28,6 +28,8 @@ $status = isset($_GET["status"]) ? $_GET["status"] : "";
 <body>
     <h1>Pendaftaran Anggota Perpustakaan</h1>
 
+    <a href="data.php">Lihat isi data pendaftaran</a>
+
     <?php if ($status === "sukses") { ?>
         <p class = "sukses">Data anggota berhasil ditambahkan.</p>
     <?php } ?>

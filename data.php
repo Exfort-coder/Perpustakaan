@@ -13,8 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Anggota Perpustakaan</title>
     <style>
-        th, td {
+        table, th, td {
             border: solid 2px;
+            border-collapse : collapse;
+        }
+        th, td {
+            padding: 12px 12px;
         }
     </style>
 </head>
@@ -45,8 +49,9 @@
             <td><?php echo htmlspecialchars($baris["jenis_anggota"]); ?></td>
             <td><?php echo htmlspecialchars($baris["alamat"]); ?></td>
             <td>
-                <a href="detail.php?id=<?php echo (int) $baris["id"] ?>">Detail</a>
-                <form action="hapus.php" class="inline" method="post" 
+                <a href="edit_anggota.php?id=<?php echo (int) $baris["id"]; ?>">Edit | </a>
+                <a href="detail.php?id=<?php echo (int) $baris["id"]; ?>">Detail</a>
+                <form class="inline" action="hapus_anggota.php" method="post" 
                 onsubmit="return confirm ('Yakin ingin menghapus data ini?')">
                     <input type="hidden" name="id" value="<?php echo (int) $baris["id"] ?>">
                     <button type="Submit">Hapus</button>
