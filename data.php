@@ -19,6 +19,8 @@
     </style>
 </head>
 <body>
+    <h1>Isi Data Pendaftaran Anggota Perpustakaan</h1>
+    <a href="form_anggota.php">Kembali ke Formulir Pendaftaran</a>
     <table>
         <tr>
             <th>No</th>
@@ -44,7 +46,8 @@
             <td><?php echo htmlspecialchars($baris["alamat"]); ?></td>
             <td>
                 <a href="detail.php?id=<?php echo (int) $baris["id"] ?>">Detail</a>
-                <form action="hapus.php" class="inline" method="post" onsubmit="return confirm ('Yakin ingin menghapus data ini?')">
+                <form action="hapus.php" class="inline" method="post" 
+                onsubmit="return confirm ('Yakin ingin menghapus data ini?')">
                     <input type="hidden" name="id" value="<?php echo (int) $baris["id"] ?>">
                     <button type="Submit">Hapus</button>
                 </form>
